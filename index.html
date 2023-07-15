@@ -4,15 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
     <!-- feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Poppins:wght@400;500;600&family=Ubuntu:wght@300;400&display=swap"
         rel="stylesheet">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
     <title>Navbar</title>
 </head>
 
@@ -20,7 +27,7 @@
     <!-- Navbar Start -->
     <nav class="navbar">
 
-        <a href="#" class="logo">MI<span>N</span>G STORE</a>
+        <p class="logo">MI<span>N</span>G STORE</p>
 
         <div class="navbar-nav">
             <a href="#home">Home</a>
@@ -29,8 +36,8 @@
         </div>
 
         <div class="side-bar">
-            <a href="#"><i data-feather="user"></i></a>
-            <a id="menu"><i data-feather="menu"></i></a>
+            <p><i data-feather="user"></i></p>
+            <p id="menu"><i data-feather="menu"></i></p>
         </div>
 
     </nav>
@@ -56,71 +63,281 @@
     </section>
     <!-- carousel end -->
 
+    <!-- Main Start -->
+    <main class="container">
+
+        <div class="content">
+
+            <div class="judul-content">
+
+                <h1><span>Ming</span> Store</h1>
+                <h2>GAK TOP UP <a href="#" class="typewrite" style="color: #4E4FEB;" data-period="2000"
+                        data-type='[ "GAK GACHA", "GAK HOKI", "GAK MAIN", "MINIMAL SKIN BOSS" ]'>
+                        <span class="wrap"></span></a>
+                </h2>
+
+                <h3>Tempat Top Up Game Yang Mudah, Murah dan Terpercaya</h3>
+                <a href="#product"><button class="c-button c-button--gooey"> Top up Sekarang
+                        <div class="c-button__blobs">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </button>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                                result="goo"></feColorMatrix>
+                            <feBlend in="SourceGraphic" in2="goo"></feBlend>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="logo-content">
+                <img src="/img/logo.png" alt="">
+            </div>
+
+        </div>
+
+    </main>
+    <!-- Main End -->
+
     <!-- Products Start -->
     <div class="product" id="product">
 
         <h1>My <span>Products</span></h1>
 
-        <div class="row">
-
-            <div class="card">
-                <img src="img/ML.jpg" alt="">
-                <div class="product-name">
-                    <h3>Mobile Legends</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/higgs_domino.jpg" alt="">
-                <div class="product-name">
-                    <h3>Higgs Domino</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/pubgm.jpg" alt="">
-                <div class="product-name">
-                    <h3>PUBG Mobile</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/valorant.jpg" alt="">
-                <div class="product-name">
-                    <h3>Valorant</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img//GenshinImpact.jpg" alt="">
-                <div class="product-name">
-                    <h3>Genshin Impact</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/ff.png" alt="">
-                <div class="product-name">
-                    <h3>Free Fire</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/AOV.jpg" alt="">
-                <div class="product-name">
-                    <h3>Arena Of Valor</h3>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="img/garena_shells.jpg" alt="">
-                <div class="product-name">
-                    <h3>Garena Shells</h3>
-                </div>
-            </div>
-
+        <div class="link">
+            <h3>Top Up :</h3>
+            <ul>
+                <a href="#ml">Mobile Legends</a>
+                <a href="#ff">Free Fire</a>
+                <a href="#pubgm">PUBG Mobile</a>
+            </ul>
         </div>
 
+        <div class="product-wrapper">
+            <div class="judul-product" data-aos="fade-down" data-aos-duration="1000">
+                <img src="img/ML.jpg" alt="Mobile Legends" id="ml">
+                <h3>Mobile Legends Bang <span>Bang</span> </h3>
+                <h4>Proses Otomatis</h4>
+                <p>Setelah melakukan pembelian mohon tunggu beberapa menit</p>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="detail-paket">
+                    <h3>Paket A :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container1')"><i data-feather="arrow-up"></i></p>
+                    <p class="arrow-down" onclick="toggleList('list-container1')" style="display: none;"><i
+                            data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container1">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="detail-paket">
+                    <h3>Paket B :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container2')"><i data-feather="arrow-up"></i></p>
+                    <p style="display: none;"><i data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container2">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <div class="detail-paket">
+                    <h3>Paket C :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container3')"><i data-feather="arrow-up"></i></p>
+                    <p style="display: none;"><i data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container3">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-wrapper">
+            <div class="judul-product" data-aos="fade-down" data-aos-duration="1000">
+                <img src="img/ff.png" alt="Free Fire" id="ff">
+                <h3>Free Fire <span>Indonesia</span> </h3>
+                <h4>Proses Otomatis</h4>
+                <p>Setelah melakukan pembelian mohon tunggu beberapa menit</p>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="detail-paket">
+                    <h3>Paket A :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container4')"><i data-feather="arrow-up"></i></p>
+                    <p class="arrow-down" onclick="toggleList('list-container1')" style="display: none;"><i
+                            data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container4">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="detail-paket">
+                    <h3>Paket B :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container5')"><i data-feather="arrow-up"></i></p>
+                    <p style="display: none;"><i data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container5">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <div class="detail-paket">
+                    <h3>Paket C :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container6')"><i data-feather="arrow-up"></i></p>
+                    <p style="display: none;"><i data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container6">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="product-wrapper">
+            <div class="judul-product" data-aos="fade-down" data-aos-duration="1000">
+                <img src="img/pubgm.jpg" alt="PUBGM" id="pubgm">
+                <h3>PUBG <span>Mobile</span> </h3>
+                <h4>Proses Otomatis</h4>
+                <p>Setelah melakukan pembelian mohon tunggu beberapa menit</p>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="detail-paket">
+                    <h3>Paket A :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container7')"><i data-feather="arrow-up"></i></p>
+                    <p class="arrow-down" onclick="toggleList('list-container1')" style="display: none;"><i
+                            data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container7">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="detail-paket">
+                    <h3>Paket B :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container8')"><i data-feather="arrow-up"></i></p>
+                    <p style="display: none;"><i data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container8">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+
+            <div class="detail-wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <div class="detail-paket">
+                    <h3>Paket C :</h3>
+                    <p class="arrow-up" onclick="toggleList('list-container9')"><i data-feather="arrow-up"></i></p>
+                    <p style="display: none;"><i data-feather="arrow-down"></i></p>
+                </div>
+
+                <ul class="list-container" id="list-container9">
+                    <li>86 Diamonds <span><br />Rp21.000</span></li>
+                    <li>172 Diamonds <span><br />Rp42.000</span></li>
+                    <li>257 Diamonds <span><br />Rp62.000</span></li>
+                    <li>344 Diamonds <span><br />Rp82.000</span></li>
+                    <li>429 Diamonds <span><br />Rp104.000</span></li>
+                    <li>514 Diamonds <span><br />Rp123.000</span></li>
+                    <li>600 Diamonds <span><br />Rp143.000</span></li>
+                    <li>706 Diamonds <span><br />Rp164.000</span></li>
+                    <li>878 Diamonds <span><br />Rp213.000</span></li>
+                    <li>963 Diamonds <span><br />Rp227.000</span></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- Products End -->
 
@@ -131,11 +348,11 @@
 
         <div class="wrapper">
 
-            <div class="about-logo">
+            <div class="about-logo" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
                 <img src="img/logo.png" alt="">
             </div>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nisi nemo, voluptate eum ex quas minima
+            <p data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nisi nemo, voluptate eum ex quas minima
                 dolor praesentium sequi, consequatur vitae odio, molestias sit repellendus quia maiores minus
                 perspiciatis molestiae vel distinctio. Quaerat quos voluptates dolor repellat veniam, nesciunt
                 praesentium quod ipsum nisi, dicta fugiat sunt doloribus reprehenderit vitae suscipit.</p>
@@ -149,6 +366,16 @@
     <script>
         feather.replace()
     </script>
+
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+    <!-- my js -->
     <script src="main.js"></script>
 </body>
 
